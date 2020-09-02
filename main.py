@@ -30,7 +30,7 @@ def main():
     clock = pygame.time.Clock()
 
     def redraw_window():
-        WIN.blit(BG, (0, 0))
+        WIN.blit(BG, (0,0))
         pygame.display.update()
 
     while run:
