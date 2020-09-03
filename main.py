@@ -22,7 +22,7 @@ BLUE_LASER = pygame.image.load(os.path.join("assets", "pixel_laser_blue.png"))
 GREEN_LASER = pygame.image.load(os.path.join("assets", "pixel_laser_green.png"))
 
 #Load background
-BG = pygame.image.load(os.path.join("assets", "background-black.png"))
+BG = pygame.transform.scale(pygame.image.load(os.path.join("assets", "background-black.png")), (WIDTH, HEIGHT))
 
 def main():
     run = True
@@ -35,7 +35,7 @@ def main():
 
     while run:
         clock.tick(FPS)
-
+        redraw_window()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
